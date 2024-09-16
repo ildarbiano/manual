@@ -1,0 +1,2 @@
+apt remove ansible
+sudo apt-get remove –purge ansible

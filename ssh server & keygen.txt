@@ -1,0 +1,12 @@
+ilya@ansiblebase:~/.ssh$
+sudo service ssh status
+
+PS C:\Users\123>
+ssh-keygen
+
+ilya@ansiblebase:~/.ssh$
+chmod 0600 <public.key>
+
+PS C:\Users\123> 
+ssh -i .\vbox ilya@192.168.0.50
+

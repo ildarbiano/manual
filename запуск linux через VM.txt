@@ -1,0 +1,12 @@
+ip addr
+sudo apt update
+sudo apt upgrade
+sudo apt-get install mc
+sudo apt-get install ansible-core
+
+sudo reboot
+
+sudo shutdown -h now
+sudo poweroff
+
+192.168.0.46

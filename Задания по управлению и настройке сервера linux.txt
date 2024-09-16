@@ -1,0 +1,5 @@
+1\ change linux hostname
+sudo hostnamectl set-hostname <newhostname>
+sudo reboot
+
+
