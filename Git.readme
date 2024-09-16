@@ -19,3 +19,5 @@ file:C:/Program Files/Git/etc/gitconfig init.defaultbranch=master
 
 Если вы хотите проверить используемую конфигурацию, можете использовать команду git config --list, чтобы показать все настройки, которые Git найдёт:
 $ git config --list
+git config --global user.email "il.v.matveev@yandex.ru"
+git config --global http.sslVerify false
