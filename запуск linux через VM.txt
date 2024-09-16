@@ -9,4 +9,9 @@ sudo reboot
 sudo shutdown -h now
 sudo poweroff
 
+ilya@ansiblebase:~/.ssh$
+sudo apt install git
+
+
 192.168.0.46
+172.20.10.7

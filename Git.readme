@@ -21,3 +21,7 @@ file:C:/Program Files/Git/etc/gitconfig init.defaultbranch=master
 $ git config --list
 git config --global user.email "il.v.matveev@yandex.ru"
 git config --global http.sslVerify false
+
+
+sudo apt install git
+git --version

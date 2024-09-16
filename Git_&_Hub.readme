@@ -1,5 +1,4 @@
 git config --global user.email "il.v.matveev@yandex.ru"
-git config --global user.name "il.V"
 git config --global http.sslVerify false
 git config --list
 
