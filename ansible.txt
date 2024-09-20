@@ -1,2 +1,3 @@
 apt remove ansible
 sudo apt-get remove –purge ansible
+урок_4 от Дениса

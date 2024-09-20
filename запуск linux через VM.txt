@@ -4,6 +4,8 @@ sudo apt upgrade
 sudo apt-get install mc
 sudo apt-get install ansible-core
 
+sudo service ssh status
+
 sudo reboot
 
 sudo shutdown -h now
@@ -14,4 +16,10 @@ sudo apt install git
 
 
 192.168.0.46
+----
 172.20.10.7
+172.20.10.8
+172.20.10.9
+172.20.10.10
+
+ilya@ansiblebase:~$ cat /home/ilya/ansbl_mstr_k
