@@ -22,4 +22,3 @@ sudo apt install git
 172.20.10.9
 172.20.10.10
 
-ilya@ansiblebase:~$ cat /home/ilya/ansbl_mstr_k
