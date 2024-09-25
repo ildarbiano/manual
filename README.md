@@ -1,3 +1,5 @@
+C:\Users\123\web.manual
+
 git remote add origin https://github.com/ildarbiano/manual.git
 
 git pull origin main

@@ -1,6 +1,0 @@
-apt remove ansible
-sudo apt-get remove –purge ansible
-урок_4 от Дениса
-
-Ansible Automation Platform
-https://www.redhat.com/en/resources/migrating-awx-to-ansible-automation-platform-brief?sc_cid=7013a000003SZBHAA4&gad_source=1&gbraid=0AAAAADsbVMTzO4OXyI0YnVg-uZb_qenwd&gclid=Cj0KCQjw3bm3BhDJARIsAKnHoVUEPPMsRkCMIrrHmY8Av9D731Q5WH5HDLoBWlHVVPZTnV84Iyk6_P4aAhmtEALw_wcB&gclsrc=aw.ds

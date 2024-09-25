@@ -1,0 +1,13 @@
+1\ change linux hostname
+sudo hostnamectl set-hostname <newhostname>
+sudo reboot
+
+apt remove ansible
+sudo apt-get remove –purge ansible
+
+sudo apt-get install tree
+tree
+
+
+less
+
