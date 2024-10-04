@@ -7,7 +7,7 @@ sudo apt-get install ansible-core
 sudo service ssh status
 
 sudo reboot
-
+su -
 sudo shutdown -h now
 sudo poweroff
 
