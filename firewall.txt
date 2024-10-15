@@ -21,12 +21,10 @@ Max kernel policy version:      33
 Enforcing
 
 
-ilya@client-ubuntu:~$ sestatus
--bash: sestatus: command not found
+
 ilya@client-ubuntu:~$ sudo -i
 [sudo] password for ilya:
-root@client-ubuntu:~# sestatus
--bash: sestatus: command not found
+
 
 ilya@client-ubuntu:~$ curl http://172.20.10.12/index.html
 curl: (7) Failed to connect to 172.20.10.12 port 80 after 0 ms: No route to host
@@ -41,17 +39,16 @@ Proto Recv-Q Send-Q Local Address           Foreign Address         State
 tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN
 tcp6       0      0 :::80                   :::*                    LISTEN
 tcp6       0      0 :::22                   :::*                    LISTEN
-================================================
-tcp 	   0 	  0 0.0.0.0:22 		    0.0.0.0:* 		    LISTEN
+
 
 [ilya@client-rhcent ~]$ netstat -na | grep :80
 tcp6       0      0 :::80                   :::*                    LISTEN
 
------------
+===========
 netstat -lt 
-	or
+-----or-
 ss -lt
-------
+======
 
 
 ilya@client-ubuntu:~$ ss -lntu
@@ -84,9 +81,7 @@ telnet 172.20.10.12 80
 
 tcpdump -i eth0 port 80 or arp
 agp -i eth0 port 80
-
 sudo ufw status
-
 dmesg | grep eth
 
 ifconfig
@@ -100,8 +95,8 @@ http://linux.mixed-spb.ru/network/centos-tcpip.php
 net.ipv6.bindv6only = 0
 
 
-
+!!!!!!
 [root@client-rhcent ~]# firewall-cmd --add-port=80/tcp
 success
-
+!!!!!!
 
