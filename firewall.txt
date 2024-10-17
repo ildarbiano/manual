@@ -99,4 +99,8 @@ net.ipv6.bindv6only = 0
 [root@client-rhcent ~]# firewall-cmd --add-port=80/tcp
 success
 !!!!!!
+systemctl enable firewalld 		#включаем автоматический запуск фарвол. Это нужно, чтобы он запускался после перезагрузки сервера.
+systemctl start firewalld 		#запускаем файрвол
+firewall-cmd --list-all 		#смотрим настройк
+firewall-cmd --runtime-to-permanent 	#делаем текущие настройки постоянными
 
