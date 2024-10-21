@@ -1,0 +1,62 @@
+mkdir
+chown
+chmod
+
+sudo mkdir -p {/app/nginx,/app/apache}
+sudo mkdir -p {/home/nginx,/home/apache}
+
+Изучить
+sudo -l
+useradd -D
+[ilya@client-rhcent /]$ su
+Пароль:
+[root@client-rhcent /]# 
+[ilya@client-rhcent /]$ sudo -i
+[root@client-rhcent ~]# 	
+
+
+sudo chown [опции] [владелец]:[группа] [путь]
+sudo chown -R root:nginx /app/nginx
+
+[ilya@client-rhcent ~]$ cat /etc/passwd | grep httpd
+apache:x:48:48:Apache:/usr/share/httpd:/sbin/nologin
+
+[ilya@client-rhcent ~]$ sudo systemctl status httpd
+● httpd.service - The Apache HTTP Server
+   Loaded: loaded (/usr/lib/systemd/system/httpd.service; enabled; vendor preset: disabled)
+   Active: active (running) since Mon 2024-10-21 18:51:19 EDT; 2min 19s ago
+     Docs: man:httpd.service(8)
+ Main PID: 2565 (httpd)
+   Status: "Total requests: 3; Idle/Busy workers 100/0;Requests/sec: 0.0233; Bytes served/sec:  17 B/sec"
+    Tasks: 278 (limit: 4680)
+   Memory: 32.3M
+   CGroup: /system.slice/httpd.service
+           ├─2565 /usr/sbin/httpd -DFOREGROUND
+           ├─2589 /usr/sbin/httpd -DFOREGROUND
+           ├─2590 /usr/sbin/httpd -DFOREGROUND
+           ├─2591 /usr/sbin/httpd -DFOREGROUND
+           ├─2592 /usr/sbin/httpd -DFOREGROUND
+           └─2864 /usr/sbin/httpd -DFOREGROUND
+
+окт 21 18:51:09 client-rhcent systemd[1]: Starting The Apache HTTP Server...
+окт 21 18:51:19 client-rhcent httpd[2565]: AH00558: httpd: Could not reliably determine the server's fully qualified domain n>
+окт 21 18:51:19 client-rhcent systemd[1]: Started The Apache HTTP Server.
+окт 21 18:51:29 client-rhcent httpd[2565]: Server configured, listening on: port 80
+
+[ilya@client-rhcent ~]$ sudo systemctl stop httpd
+[ilya@client-rhcent ~]$ sudo systemctl status httpd
+● httpd.service - The Apache HTTP Server
+   Loaded: loaded (/usr/lib/systemd/system/httpd.service; enabled; vendor preset: disabled)
+   Active: inactive (dead) since Mon 2024-10-21 18:54:50 EDT; 2s ago
+     Docs: man:httpd.service(8)
+  Process: 2565 ExecStart=/usr/sbin/httpd $OPTIONS -DFOREGROUND (code=exited, status=0/SUCCESS)
+ Main PID: 2565 (code=exited, status=0/SUCCESS)
+   Status: "Total requests: 3; Idle/Busy workers 100/0;Requests/sec: 0.0151; Bytes served/sec:  11 B/sec"
+
+окт 21 18:51:09 client-rhcent systemd[1]: Starting The Apache HTTP Server...
+окт 21 18:51:19 client-rhcent httpd[2565]: AH00558: httpd: Could not reliably determine the server's fully qualified domain n>
+окт 21 18:51:19 client-rhcent systemd[1]: Started The Apache HTTP Server.
+окт 21 18:51:29 client-rhcent httpd[2565]: Server configured, listening on: port 80
+окт 21 18:54:49 client-rhcent systemd[1]: Stopping The Apache HTTP Server...
+окт 21 18:54:50 client-rhcent systemd[1]: httpd.service: Succeeded.
+окт 21 18:54:50 client-rhcent systemd[1]: Stopped The Apache HTTP Server.
