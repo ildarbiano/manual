@@ -1,0 +1,86 @@
+Runas and Command-specific defaults for epa-tc-prod-rgn@region.vtb.ru:
+
+    Defaults!/sbin/dmidecode !requiretty
+
+ 
+
+User epa-tc-prod-rgn@region.vtb.ru may run the following commands on p0epaa-apc128lk:
+    (ALL) NOPASSWD: /bin/systemctl start tomcat-ig
+    (ALL) NOPASSWD: /bin/systemctl stop tomcat-ig
+    (ALL) NOPASSWD: /bin/systemctl restart tomcat-ig
+    (ALL) NOPASSWD: /bin/systemctl status tomcat-ig
+    (ALL) NOPASSWD: /bin/systemctl reload tomcat-ig
+    (ALL) NOPASSWD: /bin/systemctl enable tomcat-ig
+    (ALL) NOPASSWD: /bin/systemctl disable tomcat-ig
+    (ALL) NOPASSWD: /bin/journalctl -u tomcat-ig
+    (openig) NOPASSWD: ALL
+
+    (ALL) NOPASSWD: /bin/systemctl start nginx
+    (ALL) NOPASSWD: /bin/systemctl stop nginx
+    (ALL) NOPASSWD: /bin/systemctl restart nginx
+    (ALL) NOPASSWD: /bin/systemctl status nginx
+    (ALL) NOPASSWD: /bin/systemctl reload nginx
+    (ALL) NOPASSWD: /bin/systemctl enable nginx
+    (ALL) NOPASSWD: /bin/systemctl disable nginx
+    (ALL) NOPASSWD: /bin/journalctl -u nginx
+    (nginx) NOPASSWD: ALL
+
+    (ALL) NOPASSWD: /bin/systemctl start td-agent-bit_epa
+    (ALL) NOPASSWD: /bin/systemctl stop td-agent-bit_epa
+    (ALL) NOPASSWD: /bin/systemctl restart td-agent-bit_epa
+    (ALL) NOPASSWD: /bin/systemctl status td-agent-bit_epa
+    (ALL) NOPASSWD: /bin/systemctl reload td-agent-bit_epa
+    (ALL) NOPASSWD: /bin/systemctl enable td-agent-bit_epa
+    (ALL) NOPASSWD: /bin/systemctl disable td-agent-bit_epa
+    (ALL) NOPASSWD: /bin/journalctl -u td-agent-bit_epa
+    (td-agent) NOPASSWD: ALL
+
+    (ALL) NOPASSWD: /opt/VTB/OS_update/main.sh
+
+epa-tc-prod-rgn@region.vtb.ru@p0epaa-apc128lk ~ $ ll /u01/logs/
+total 0
+drwxr-xr-x 2 nginx    nginx    6 Oct 18 14:28 nginx
+drwxr-xr-x 2 openig   openig   6 Oct 18 14:28 openig
+drwxr-xr-x 2 td-agent td-agent 6 Oct 18 14:28 td-agent-bit
+
+epa-tc-prod-rgn@region.vtb.ru@p0epaa-apc128lk ~ $ ll /app/
+total 0
+drwxr-xr-x 7 nginx    nginx    67 Oct 18 14:25 nginx
+drwxr-xr-x 2 openig   openig    6 Oct 18 14:20 openig
+drwxr-xr-x 2 td-agent td-agent  6 Oct 18 14:21 td-agent-bit
+drwxrwxr-x 5 nginx    nginx    55 Oct 18 14:26 tls
+
+epa-tc-prod-rgn@region.vtb.ru@p0epaa-apc128lk ~ $
+
+ 
+
+ 
+
+epa-tc-prod-rgn@region.vtb.ru@p0epaa-apc128lk ~ $ sudo systemctl status nginx
+● nginx.service - nginx - high performance web server
+   Loaded: loaded (/etc/systemd/system/nginx.service; enabled; vendor preset: enabled)
+   Active: inactive (dead)
+     Docs: http://nginx.org/en/docs/
+Oct 18 14:24:30 p0epaa-apc128lk.region.vtb.ru systemd[1]: /lib/systemd/system/nginx.service:8: PIDFile= references path below legacy directory /va
+
+Oct 18 14:24:30 p0epaa-apc128lk.region.vtb.ru systemd[1]: /lib/systemd/system/nginx.service:8: PIDFile= references path below legacy directory /va
+
+Oct 18 14:24:31 p0epaa-apc128lk.region.vtb.ru systemd[1]: /lib/systemd/system/nginx.service:8: PIDFile= re
+
+ 
+
+ 
+
+epa-tc-prod-rgn@region.vtb.ru@p0epaa-apc128lk ~ $ systemctl status tomcat-ig
+● tomcat-ig.service - Apache Tomcat Web Application Container
+   Loaded: loaded (/etc/systemd/system/tomcat-ig.service; disabled; vendor preset: enabled)
+   Active: inactive (dead)
+
+epa-tc-prod-rgn@region.vtb.ru@p0epaa-apc128lk ~ $ sudo systemctl status td-agent-bit_epa
+● td-agent-bit_epa.service - TD Agent Bit EPAA
+   Loaded: loaded (/etc/systemd/system/td-agent-bit_epa.service; disabled; vendor preset: enabled)
+   Active: inactive (dead)
+
+ 
+
+ 

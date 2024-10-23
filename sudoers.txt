@@ -2,8 +2,11 @@
 [sudo] пароль для ilya:
 ilya is not in the sudoers file.  This incident will be reported.
 
-[ilya@localhost ~]$ su -
+[ilya@client-rhcent /]$ su
 Пароль:
+[root@client-rhcent /]# 
+[ilya@client-rhcent /]$ sudo -i
+[root@client-rhcent ~]# 
 [root@localhost ~]# cat /etc/sudoers
 
 [root@localhost ~]# sudo usermod -a -G wheel ilya

@@ -8,11 +8,7 @@ sudo mkdir -p {/home/nginx,/home/apache}
 Изучить
 sudo -l
 useradd -D
-[ilya@client-rhcent /]$ su
-Пароль:
-[root@client-rhcent /]# 
-[ilya@client-rhcent /]$ sudo -i
-[root@client-rhcent ~]# 	
+	
 
 
 sudo chown [опции] [владелец]:[группа] [путь]
