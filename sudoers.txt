@@ -9,7 +9,9 @@ ilya is not in the sudoers file.  This incident will be reported.
 [root@client-rhcent ~]# 
 [root@localhost ~]# cat /etc/sudoers
 
-[root@localhost ~]# sudo usermod -a -G wheel ilya
+[root@localhost ~]# 	sudo usermod -a -G wheel ilya
+[ilya@client-rhcent ~]$ sudo usermod -a -G sudo apache
+usermod: группа «sudo» не существует
 [root@localhost ~]# getent group wheel
 wheel:x:10:ilya
 
