@@ -81,6 +81,128 @@ epa-tc-prod-rgn@region.vtb.ru@p0epaa-apc128lk ~ $ sudo systemctl status td-agent
    Loaded: loaded (/etc/systemd/system/td-agent-bit_epa.service; disabled; vendor preset: enabled)
    Active: inactive (dead)
 
+  
+
+epa-tc-prod-rgn@region.vtb.ru@p0epaa-apc065lk ~ $ ls -ls /app
+
+total 0
+
+0 drwxrwxr-x  8 nginx    nginx    183 Oct 19 23:57 nginx
+
+0 drwxr-xr-x 10 openig   openig   199 Oct 19 23:57 openig
+
+0 drwxrwxr-x  5 td-agent td-agent 172 Aug  6 03:32 td-agent-bit
+
+0 drwxrwxr-x  5 nginx    nginx     55 Feb  7  2024 tls
+
+epa-tc-prod-rgn@region.vtb.ru@p0epaa-apc065lk ~ $ ls -ls /u01/logs/
+
+total 8
+
+4 drwxr-xr-x 2 nginx    nginx    4096 Oct 25 09:09 nginx
+
+4 drwxrwxr-x 2 openig   openig   4096 Oct 25 10:00 openig
+
+0 drwxr-xr-x 2 td-agent td-agent    6 Jun  3 12:05 td-agent-bit
+
+epa-tc-prod-rgn@region.vtb.ru@p0epaa-apc065lk ~ $ ls -ls /home/
+
+total 0
+
+0 drwx------ 5 aroot                debian               180 Feb  7  2024 aroot
+
+0 drwx------ 3 cloud-user           cloud-user            69 Jan 23  2024 cloud-user
+
+0 drwx------ 3 cmdbadmp             cmdbadm               69 Aug 17 10:48 cmdbadmp
+
+0 drwx------ 3 debian               debian                69 Jan 17  2022 debian
+
+0 drwx------ 4 discagent            discagent             86 Jan 23  2024 discagent
+
+0 drwx------ 3                  655                  655 108 Jun 27  2022 droot
+
+0 drwx------ 5 MPLinuxSrv-ads       MPLinuxSrv-ads        98 Apr 11  2024 MPLinuxSrv-ads
+
+0 drwx------ 3 nginx                nginx                 73 Jun  6 05:42 nginx
+
+0 drwx------ 6 openig               openig               137 Jun  6 05:34 openig
+
+0 drwxr-xr-x 4 root                 root                  46 Jun 13 21:45 region.vtb.ru
+
+0 drwx------ 2 saltcmdb             saltcmdb              78 Aug 17 10:48 saltcmdb
+
+0 drwx------ 6 td-agent             td-agent             137 Jun 13 19:51 td-agent
+
+0 drwx------ 3                  654                  654 108 Nov  2  2022 troot
+
+0 drwx------ 5 vtbcloud-config-mgmt vtbcloud-config-mgmt  99 Jan 23  2024 vtbcloud-config-mgmt
+
+0 drwx------ 3 vtbmonp              vtbmon                69 Jan 23  2024 vtbmonp
+
+epa-tc-prod-rgn@region.vtb.ru@p0epaa-apc065lk ~ $ cd
+
+epa-tc-prod-rgn@region.vtb.ru@p0epaa-apc065lk ~ $ ls -la
+
+total 20
+
+drwx------ 8 epa-tc-prod-rgn@region.vtb.ru domain users@region.vtb.ru  179 Oct 20 00:51 .
+
+drwxr-xr-x 4 root                          root                         46 Jun 13 21:45 ..
+
+drwx------ 3 epa-tc-prod-rgn@region.vtb.ru domain users@region.vtb.ru   17 Oct 18 11:05 .ansible
+
+-rw------- 1 epa-tc-prod-rgn@region.vtb.ru domain users@region.vtb.ru 3751 Oct 24 08:22 .bash_history
+
+-rw------- 1 epa-tc-prod-rgn@region.vtb.ru domain users@region.vtb.ru  220 Feb 26  2024 .bash_logout
+
+-rw------- 1 epa-tc-prod-rgn@region.vtb.ru domain users@region.vtb.ru 3569 Feb 26  2024 .bashrc
+
+drwx------ 3 epa-tc-prod-rgn@region.vtb.ru domain users@region.vtb.ru   16 May 17 15:41 .cache
+
+drwx------ 3 epa-tc-prod-rgn@region.vtb.ru domain users@region.vtb.ru   16 May 17 15:41 .config
+
+drwx------ 3 epa-tc-prod-rgn@region.vtb.ru domain users@region.vtb.ru   50 Sep 16 03:00 .gnupg
+
+-rw------- 1 epa-tc-prod-rgn@region.vtb.ru domain users@region.vtb.ru   46 Oct 20 00:51 .lesshst
+
+drwx------ 3 epa-tc-prod-rgn@region.vtb.ru domain users@region.vtb.ru   19 May 17 15:41 .local
+
+-rw------- 1 epa-tc-prod-rgn@region.vtb.ru domain users@region.vtb.ru  807 Feb 26  2024 .profile
+
+drwx------ 2 epa-tc-prod-rgn@region.vtb.ru domain users@region.vtb.ru   25 Jul 23 16:22 .ssh
+
+epa-tc-prod-rgn@region.vtb.ru@p0epaa-apc065lk ~ $ mc
+
+ 
+
+epa-tc-prod-rgn@region.vtb.ru@p0epaa-apc065lk ~ $ cat /etc/group | grep nginx
+
+crontab:x:105:openig,td-agent,nginx
+
+nginx:x:201:
+
+log_nginx:x:202:
+
+nginx_admin:x:1006:
+
+epa-tc-prod-rgn@region.vtb.ru@p0epaa-apc065lk ~ $ cat /etc/group | grep openig
+
+crontab:x:105:openig,td-agent,nginx
+
+openig:x:1005:
+
+epa-tc-prod-rgn@region.vtb.ru@p0epaa-apc065lk ~ $ cat /etc/group | grep td-agent
+
+crontab:x:105:openig,td-agent,nginx
+
+td-agent:x:909:
+
+epa-tc-prod-rgn@region.vtb.ru@p0epaa-apc065lk ~ $ cat /etc/group | grep sudo
+
+sudo:x:27:debian
+
+epa-tc-prod-rgn@region.vtb.ru@p0epaa-apc065lk ~ $
+
  
 
  
