@@ -39,6 +39,8 @@ User epa-tc-prod-rgn@region.vtb.ru may run the following commands on p0epaa-apc1
 
 epa-tc-prod-rgn@region.vtb.ru@p0epaa-apc128lk ~ $ ll /u01/logs/
 total 0
+ rwxrwxrwx
+drwxr-x--x 
 drwxr-xr-x 2 nginx    nginx    6 Oct 18 14:28 nginx
 drwxr-xr-x 2 openig   openig   6 Oct 18 14:28 openig
 drwxr-xr-x 2 td-agent td-agent 6 Oct 18 14:28 td-agent-bit

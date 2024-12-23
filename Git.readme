@@ -1,3 +1,5 @@
+игра тест = https://learngitbranching.js.org/?locale=ru_RU
+
 Чтобы посмотреть все установленные настройки и узнать где именно они заданы, используйте команду:
 git config --list --show-origin
 PS C:\users\123\.ssh> git config --list --show-origin
